@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=PT+Serif:ital@1&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto Mono", monospace !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar-brand {
+  margin-left: 12px;
+}
+
+h1 {
+  font-size: 34px !important;
+  margin-bottom: 0.25rem !important;
+}
+
+h2 {
+  font-size: 38px !important;
+  font-weight: bold !important;
+
+}
+
+h3 {
+  font-size: 42px !important;
+  padding-top: 12px !important;
+  font-family: "Caveat", cursive !important;
+}
+
+notify {
+  background-color: darkred !important;
+  color: antiquewhite !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  margin-bottom: 24px !important;
+  padding: 2px 4px !important;
+}
+
+.btn {
+  border: 2px solid #f44336 !important;
+  background-color: #f44336 !important;
+  color: antiquewhite !important;
+  margin-top: 12px !important;
+  padding: 12px 14px !important;
+}
+
+.btn:hover {
+  background-color: antiquewhite !important;
+  color: black !important;
+}
+
+.flex-container {
+  display: flex !important;
+  padding: 12px !important;
+}
+
+custom {
+  font-size: 28px !important;
+  font-weight: bolder !important;
+  margin-right: "20px" !important;
+  color: darkred !important;
+  font-family: "Kaushan Script", cursive !important;
+}
+
+a {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  text-align: right !important;
+}
+
+a:hover {
+  color: antiquewhite !important;
+}
+
+p {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  font-family: "Roboto Mono", monospace !important;
+}
+
+.logo {
+  height: 38px;
+  width: 38px;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.fa-plus {
+  margin: 5px;
+}
+
+.fa-minus {
+  margin: 5px;
+}
+
+.fa-trash {
+  color: red;
+  padding: 12px;
+  margin-bottom: 6px;
+}
+
+input {
+  margin-top: 10px !important;
+  box-shadow: none !important;
+}
+
+.dropdown-item{
+  text-align: left !important;
+}
+.dropdown-item:hover {
+  background-color: antiquewhite !important;
+  color: #333 !important;
+}
+
+a.register:hover {
+  color: darkred !important;
+}
