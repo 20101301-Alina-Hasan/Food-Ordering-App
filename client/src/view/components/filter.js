@@ -1,4 +1,4 @@
-import "../css/filter.css";
+import "../css/search.css";
 import { useState } from "react";
 
 export default function Filter(props) {
@@ -13,7 +13,6 @@ export default function Filter(props) {
 
   return (
     <div className="category-filter mt-4">
-      
       <select
         id="category"
         value={selectedCategory}

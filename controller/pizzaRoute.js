@@ -58,26 +58,5 @@ router.put("/update/:id", async (req, res) => {
   }
 });
 
-/*router.put("/edit/:id", async (req, res) => {
-  const { name, size, prices, category, image, description } = req.body;
-  try {
-    const pizza = await Pizza.findByIdAndUpdate(req.params.id, {
-      name,
-      size,
-      prices,
-      category,
-      image,
-      description,
-    }, { new: true });
-    if (!pizza) {
-      return res.status(404).send("Pizza not found");
-    }
-    return res.redirect(`/edit?id=${req.params.id}`);
-  } catch (e) {
-    return res.status(400).send(e.message);
-  }
-});*/
-
-
 module.exports = router;
 

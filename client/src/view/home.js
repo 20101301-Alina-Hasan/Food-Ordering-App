@@ -38,8 +38,10 @@ export default function Home() {
 
   return (
     <div>
-      <Search searchTerm={searchTerm} onChange={handleSearch} />
-      <Filter pizza={pizza} onFilter={handleFilter} />
+      <div class="custom-search-box">
+        <Search searchTerm={searchTerm} onChange={handleSearch} />
+        <Filter pizza={pizza} onFilter={handleFilter} />
+      </div>
       <div className="row">
         {loading ? (
           <div className="empty-bg">

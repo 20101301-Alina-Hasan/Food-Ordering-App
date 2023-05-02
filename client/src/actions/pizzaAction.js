@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const getPizza = () => async (dispatch) => {
   dispatch({ type: "GET_PIZZA_REQUEST" });
