@@ -1,18 +1,9 @@
-import { combineReducers } from "redux";
-import { getPizzaReducer, addPizzaReducer, updatePizzaReducer } from "./reducers/pizzaReducer";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { configureStore } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
-import { legacy_createStore as createStore, applyMiddleware } from "redux";
+import { getPizzaReducer, addPizzaReducer, deletePizzaReducer} from "./reducers/pizzaReducer";
+import { updatePizzaReducer } from "./reducers/pizzaReducer";
 import { cartReducer } from "./reducers/cartReducer";
 import { registerUserReducer, loginUserReducer } from "./reducers/userReducer";
-
-const finalReducer = combineReducers({
-  getPizzaReducer: getPizzaReducer,
-  cartReducer: cartReducer,
-  registerUserReducer: registerUserReducer,
-  loginUserReducer: loginUserReducer,
-  addPizzaReducer: addPizzaReducer,
-});
 
 const currentUser = localStorage.getItem("currentUser")
   ? JSON.parse(localStorage.getItem("currentUser"))
@@ -21,17 +12,28 @@ const currentUser = localStorage.getItem("currentUser")
 const cartItems = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
- 
+
 const initialState = {
+  user: currentUser,
   cartReducer: { cartItems: cartItems },
   loginUserReducer: { currentUser: currentUser},
 };
 
-const composeEnhancers = composeWithDevTools({});
-const store = createStore(
-  finalReducer,
-  initialState,
-  composeEnhancers(applyMiddleware(thunk))
-);
+const middleware = [thunk];
+
+const store = configureStore({
+  reducer: {
+    getPizzaReducer: getPizzaReducer,
+    cartReducer: cartReducer,
+    registerUserReducer: registerUserReducer,
+    loginUserReducer: loginUserReducer,
+    addPizzaReducer: addPizzaReducer,
+    deletePizzaReducer: deletePizzaReducer,
+    updatePizzaReducer: updatePizzaReducer,
+  },
+  middleware,
+  devTools: true,
+  preloadedState: initialState
+});
 
 export default store;

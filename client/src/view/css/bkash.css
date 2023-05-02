@@ -1,0 +1,7 @@
+.bkash-page {
+    padding: 18%;
+}
+
+input + button {
+    margin-top: 1rem;
+}

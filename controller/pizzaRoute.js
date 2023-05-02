@@ -11,7 +11,7 @@ router.get("/getPizza", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/add", async (req, res) => {
   const { name, size, prices, category, image, description } = req.body;
   const newPizza = new Pizza({
     name,
@@ -29,4 +29,55 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/delete/:id", async (req, res) => {
+  try {
+    const pizza = await Pizza.findByIdAndDelete(req.params.id);
+    if (!pizza) {
+      return res.status(404).send("Pizza not found");
+    }
+    return res.send(pizza);
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});
+
+router.put("/update/:id", async (req, res) => {
+  try {
+    const updatedPizza = await Pizza.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    if (updatedPizza) {
+      res.json(updatedPizza);
+    } else {
+      res.status(404).json({ message: "Pizza not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+/*router.put("/edit/:id", async (req, res) => {
+  const { name, size, prices, category, image, description } = req.body;
+  try {
+    const pizza = await Pizza.findByIdAndUpdate(req.params.id, {
+      name,
+      size,
+      prices,
+      category,
+      image,
+      description,
+    }, { new: true });
+    if (!pizza) {
+      return res.status(404).send("Pizza not found");
+    }
+    return res.redirect(`/edit?id=${req.params.id}`);
+  } catch (e) {
+    return res.status(400).send(e.message);
+  }
+});*/
+
+
 module.exports = router;
+

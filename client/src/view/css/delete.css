@@ -1,0 +1,68 @@
+table {
+  font-size: 10px;
+  background-color: white;
+  justify-content: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-size: large;
+  font-weight: bolder;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+td {
+  font-size: medium;
+  font-weight: bold;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.delete-img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.btn-primary + .btn-primary {
+  margin: 12px;
+}
+
+.link-btn {
+  padding: 6% !important;
+}
+
+.link-btn:hover {
+  color: white !important;
+}
+
+.del-btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6%;
+  border: none !important;
+  background-color: red;
+  color: white;
+}
+
+.del-btn:hover {
+  background-color: darkred;
+}
+
+.up-btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6%;
+  border: none !important;
+  background-color: blue;
+  color: white !important;
+}
+
+.up-btn:hover {
+  color: white !important;
+  background-color: darkblue;
+}
+

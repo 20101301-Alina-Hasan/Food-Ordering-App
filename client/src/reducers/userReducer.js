@@ -30,6 +30,7 @@ export const loginUserReducer = (state = {}, action) => {
         loading: false,
         success: true,
         currentUser: action.payload,
+        isAdmin: action.payload.isAdmin
       };
     case "USER_LOGIN_FAILED":
       return {
@@ -40,3 +41,4 @@ export const loginUserReducer = (state = {}, action) => {
       return state;
   }
 };
+

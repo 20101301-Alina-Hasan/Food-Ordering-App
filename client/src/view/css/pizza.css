@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=PT+Serif:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Bungee+Inline&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto Mono", monospace;
+  background: linear-gradient(to bottom, brown, red);
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar-brand {
+  margin-left: 12px;
+}
+
+h1 {
+  font-size: 34px;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.sml-btn {
+  border: 2px solid #f44336;
+  border-radius: 12px !important;
+  background-color: #f44336;
+  color: white;
+  padding: 12px 18px;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.sml-btn:hover {
+  border: 2px solid #f44336;
+  background-color: antiquewhite;
+  color: black;
+  cursor: pointer;
+}
+
+.flex-container {
+  display: flex;
+  padding: 12px;
+}
+
+.pizza-choice {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Roboto Mono", monospace;
+}
+
+.select-sm {
+  font-size: 1rem;
+  height: 2rem;
+  width: 10rem;
+  display: inline-block;
+  padding: auto;
+  margin: auto;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  background-color: whitesmoke;
+}
+
+.pizza-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 36px;
+  margin-top: 16px;
+}
+
+.pizza-img {
+  height: 24rem;
+  width: 24rem;
+  margin: auto;
+}
+
+.pizza-price {
+  font-family: "Amatic SC", cursive;
+  font-size: 34px;
+  margin-top: 16px;
+}
+
+.custom-box {
+  margin: 2%;
+  padding: 2%;
+  border-radius: 5%;
+  background-color: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.empty-bg {
+  display: flex;
+  background-color: brown;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

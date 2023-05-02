@@ -1,11 +1,11 @@
+import "./css/bkash.css";
 import { useState } from "react";
 import { clearCart } from "../actions/cartAction";
 import { useDispatch } from "react-redux";
 
 export default function Bkash() {
-  const [successMessage, setSuccessMessage] = useState("");
-
   const dispatch = useDispatch();
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +14,7 @@ export default function Bkash() {
   };
 
   return (
-    <div className="container py-5">
+    <body class="bkash-page">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card">
@@ -26,16 +26,14 @@ export default function Bkash() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    <label htmlFor="contactNumber">BKash Contact Number</label>
-                    <input
-                      required
-                      type="tel"
-                      className="form-control"
-                      id="contact"
-                      pattern="[0-9]{11}"
-                    />
-                  </div>
+                  <input
+                    required
+                    type="tel"
+                    className="form-control"
+                    id="contact"
+                    placeholder="Bkash Contact Number"
+                    pattern="[0-9]{11}"
+                  />
                   <button
                     type="submit"
                     className="btn btn-primary btn-block p-2"
@@ -48,6 +46,6 @@ export default function Bkash() {
           </div>
         </div>
       </div>
-    </div>
+    </body>
   );
 }

@@ -11,8 +11,8 @@ export const getPizzaReducer = (state = { pizza: [] }, action) => {
         pizza: action.payload,
       };
     case "GET_PIZZA_FAILED":
-      return { 
-        error: action.payload, 
+      return {
+        error: action.payload,
         loading: false,
       };
     default:
@@ -42,4 +42,46 @@ export const addPizzaReducer = (state = {}, action) => {
   }
 };
 
+export const deletePizzaReducer = (state = {}, action) => {
+  switch (action.type) {
+    case "DELETE_PIZZA_REQUEST":
+      return {
+        loading: true,
+      };
+    case "DELETE_PIZZA_SUCCESS":
+      return {
+        loading: false,
+        success: true,
+      };
+    case "DELETE_PIZZA_FAILED":
+      return {
+        loading: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export const updatePizzaReducer = (state = {}, action) => {
+  switch (action.type) {
+    case "UPDATE_PIZZA_REQUEST":
+      return {
+        loading: true,
+      };
+    case "UPDATE_PIZZA_SUCCESS":
+      return {
+        loading: false,
+        success: true,
+        pizza: action.payload,
+      };
+    case "UPDATE_PIZZA_FAILED":
+      return {
+        loading: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
 

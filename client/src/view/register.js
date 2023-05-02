@@ -1,8 +1,7 @@
+import "./css/register.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../actions/userAction.js";
-import { useNavigate, Link } from "react-router-dom";
-import "../register.css";
 
 export default function Register() {
   const [firstName, setFirstName] = useState("");
@@ -13,11 +12,13 @@ export default function Register() {
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   function register() {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (password !== confirm) {
       alert("Passwords do not match!");
+    } else if (!emailRegex.test(email)) {
+      alert("Invalid email address!");
     } else {
       const user = {
         firstName,
@@ -28,9 +29,21 @@ export default function Register() {
       console.log(user);
       dispatch(registerUser(user)).then(() => {
         setRegistrationSuccess(true);
+        setTimeout(() => {
+          setRegistrationSuccess(false);
+        }, 3000);
       });
     }
+    resetForm();
   }
+
+  const resetForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setConfirm("");
+  };
 
   return (
     <div className="register-container">
@@ -90,12 +103,12 @@ export default function Register() {
               setConfirm(e.target.value);
             }}
           />
-          <button onClick={register} className="btn register-btn p-2">
+          <button onClick={register} className="btn register-btn mt-4">
             Register
           </button>
         </div>
         <p className="register-link">
-          Already had a Byte? <Link to="/login">Log in</Link>
+          Already had a Byte? <a href="/login">Log in</a>
         </p>
       </div>
     </div>

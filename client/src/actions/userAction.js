@@ -19,7 +19,11 @@ export const userLogin = (user) => async (dispatch) => {
     console.log(response);
     dispatch({ type: "USER_LOGIN_SUCCESS", payload: response.data });
     localStorage.setItem("currentUser", JSON.stringify(response.data));
-    window.location.href = "/";
+    if (response.data.isAdmin === true) {
+      window.location.href = "/delete";
+    } else {
+      window.location.href = "/";
+    }
   } catch (error) {
     dispatch({ type: "USER_LOGIN_FAILED", payload: error });
   }
