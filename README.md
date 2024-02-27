@@ -1,4 +1,4 @@
-# CSE470: Software Engineering
+# CSE470: Software Engineering | BRACU
 ## Food-Ordering-App, MERN
 
 The web application uses MERN Stack, an MVC architecture. 
