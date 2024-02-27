@@ -13,7 +13,7 @@ There are 3 action files:
 * [pizzaAction.js](/client/src/actions/pizzaAction.js)
 * [userAction.js](/client/src/actions/userAction.js)
 
-Subsequently, there are three 3 test files:
+Subsequently, there are three 3 test suites:
 * [cartAction.test.js](/client/src/actions/cartAction.test.j)
 * [pizzaAction.test.js](/client/src/actions/pizzaAction.test.js)
 * [userAction.test.js](/client/src/actions/userAction.test.js)
