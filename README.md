@@ -15,4 +15,4 @@ Subsequently, there are three 3 files:
 * [userAction.test.js](/client/src/actions/userAction.test.js)
   
 In total, there are 15 test cases, all of which pass:
-![test case](/test.png)
+![test case](/test_case.png)
