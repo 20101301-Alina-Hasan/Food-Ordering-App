@@ -1,7 +1,7 @@
 # CSE470: Software Engineering
 ## Food-Ordering-App, MERN
 
-The Food-Ordering-App I have developed uses MERN Stack, an MVC architecture. 
+The web application uses MERN Stack, an MVC architecture. 
 
 ### Here is what the menu looks like...
 
