@@ -3,7 +3,7 @@
 
 The Food-Ordering-App I have developed uses MERN Stack, an MVC architecture. 
 
-## Here is an image of homepage menu
+## Here is what the menu looks like...
 
 ![Menu](/menu.png)
 
